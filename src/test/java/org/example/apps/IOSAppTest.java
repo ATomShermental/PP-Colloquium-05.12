@@ -11,9 +11,12 @@ class IOSAppTest {
         ConsoleCaptor consoleCaptor = new ConsoleCaptor();
         IOSApp iosApp = new IOSApp();
         iosApp.createIOSApp();
-        assertThat(consoleCaptor.getStandardOutput()).contains("Swift Developer writes Swift code",
+        assertThat(consoleCaptor.getStandardOutput())
+                .contains(
+                "Swift Developer writes Swift code",
                 "IOS Tester tests IOS app",
-                "IOS PM manages IOS app");
+                "IOS PM manages IOS app"
+                );
         consoleCaptor.close();
     }
 }
